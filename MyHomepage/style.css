@@ -1,0 +1,19 @@
+.top {
+  background-image: url(https://c0.wallpaperflare.com/preview/655/269/228/sea-night-ocean-dark.jpg);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+.profpic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+#footer {
+  background-color: black;
+  padding: 5px;
+  border-radius: 20px;
+}
