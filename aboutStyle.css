@@ -1,0 +1,71 @@
+h1 {
+  color: antiquewhite;
+}
+p {
+  color: aliceblue;
+}
+
+#pa {
+  color: black;
+  text-align: center;
+}
+#sa {
+  color: black;
+  text-align: center;
+}
+ul,
+a {
+  color: aliceblue;
+}
+h2 {
+  color: antiquewhite;
+}
+#mo,
+#ff {
+  color: black;
+}
+
+.top {
+  background-image: url(https://c0.wallpaperflare.com/preview/655/269/228/sea-night-ocean-dark.jpg);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  object-fit: cover;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 20px;
+}
+
+.happ {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  right: 55px;
+}
+.sadd {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.aboutmain {
+  background-color: darkslategrey;
+  margin-top: 0px;
+}
+
+.about_top {
+  background-color: black;
+}
+#footer {
+  background-color: black;
+  padding: 5px;
+  border-radius: 20px;
+}
+.sad-div,
+.happy-div {
+  display: inline-block;
+}
+.sad-div {
+  margin-left: 150px;
+}
