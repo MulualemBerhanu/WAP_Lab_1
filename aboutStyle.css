@@ -41,7 +41,6 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
   position: relative;
-  right: 55px;
 }
 .sadd {
   width: 200px;
@@ -65,7 +64,8 @@ h2 {
 .sad-div,
 .happy-div {
   display: inline-block;
+  margin-left: 100px;
 }
 .sad-div {
-  margin-left: 150px;
+  margin-left: 100px;
 }
