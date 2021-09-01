@@ -1,0 +1,32 @@
+.contents-list,
+.copyright-list,
+.comments-list,
+.comments-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+.comments-list {
+  margin-left: 40px;
+}
+.comments-list > li > ul {
+  background-color: #ffffa8;
+}
+.copyright-list {
+  display: inline-block;
+}
+.copyright-list > li {
+  text-align: right;
+}
+body {
+  background-image: url("images/silverware.jpg");
+}
+#pieimage {
+  margin-left: 20px;
+}
+h1 {
+  background-color: chocolate;
+}
