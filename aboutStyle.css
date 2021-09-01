@@ -21,7 +21,8 @@ h2 {
   color: antiquewhite;
 }
 #mo,
-#val #ff {
+#val,
+#ff {
   color: black;
 }
 
