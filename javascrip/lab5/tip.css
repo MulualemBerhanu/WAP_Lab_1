@@ -38,3 +38,8 @@ button {
 .ffc {
   padding-top: 150px;
 }
+#n {
+  position: relative;
+  margin-left: 615px;
+  margin-bottom: -10px;
+}
