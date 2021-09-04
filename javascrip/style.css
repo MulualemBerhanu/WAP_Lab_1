@@ -1,0 +1,29 @@
+.top {
+  background-image: url(https://c0.wallpaperflare.com/preview/655/269/228/sea-night-ocean-dark.jpg);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  object-fit: cover;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 20px;
+}
+#footer {
+  background-color: black;
+  padding: 5px;
+  border-radius: 20px;
+  padding-bottom: 50px;
+}
+#ptop {
+  font-size: 55px;
+  color: chocolate;
+  padding: 20px;
+  padding-top: 100px;
+}
+.a {
+  font-size: 50px;
+  padding: 5px;
+}
+.b {
+  padding: 50px;
+  padding-bottom: 50px;
+}
