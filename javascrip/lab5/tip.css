@@ -1,6 +1,10 @@
 body {
   margin-left: 20%;
   margin-right: 20%;
+  background-image: url("back.jpg");
+  background-size: 100% 100%;
+  background-origin: border-box;
+  object-fit: cover;
 }
 body,
 input,
@@ -38,8 +42,11 @@ button {
 .ffc {
   padding-top: 150px;
 }
+
+#m {
+  float: right;
+}
 #n {
-  position: relative;
-  margin-left: 615px;
-  margin-bottom: -10px;
+  float: left;
+  margin-left: 905px;
 }
