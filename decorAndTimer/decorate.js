@@ -10,7 +10,7 @@ window.onload=function(){
         
     }
     document.getElementById("reduce-btn").onclick=function(){
-        document.getElementById("text-area").style.fontSize=(parseInt(window.getComputedStyle(document.getElementById('text-area')).fontSize)-1)+"pt";
+        document.getElementById("text-area").style.fontSize=(parseInt(window.getComputedStyle(document.getElementById('text-area')).fontSize)-2)+"pt";
     }
     document.getElementById("bling-radio").onchange=function(){
         let textArea=document.getElementById("text-area");
