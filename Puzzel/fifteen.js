@@ -10,9 +10,9 @@ function render(state){
     }
 }
 function shuffle(){
-    for(let i=0,temp;i<10;i++){
-        temp=chooseRandom(zeroPos);
-        move(zeroPos,temp);
+    for(let i =0; i<100;i++){
+            temp=chooseRandom(zeroPos);
+            move(zeroPos,temp);
     }
 }
 function move(init,target){
@@ -20,6 +20,10 @@ function move(init,target){
     state[target.x][target.y]=0;
     state[init.x][init.y]=temp;
     zeroPos=target;
+    moveDom(init);
+}
+function moveDom(init){
+    $(`#tile${state[init.x][init.y]}`).animate({top:100*init.x+"px",left:100*init.y+"px"});
 }
 function findPos(value){
     for(let i=0; i<4; i++){
@@ -71,14 +75,12 @@ $(function(){
     init();
     $("#shufflebutton").click(()=>{
         shuffle();
-        render(state);
     });
 
     $(".puzzlepiece").click(function(){
         let pos = findPos(parseInt($(this).attr("id").substring(4)));
         if(areNeighbors(zeroPos,pos)){
             move(zeroPos,pos)
-            render(state)
         }
     });
     $(".puzzlepiece").hover(function(){
