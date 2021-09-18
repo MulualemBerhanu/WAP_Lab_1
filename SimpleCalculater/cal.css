@@ -1,0 +1,14 @@
+#main {
+    background-color: darkgrey;
+    color: black;
+    width: 30%;
+    margin: auto;
+    border-style: groove;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+}
+
+button {
+    margin: 8px;
+}
