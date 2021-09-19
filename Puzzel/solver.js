@@ -34,9 +34,9 @@ function availableMoves(blankCord, width, height){
 }
 
 function isSolved(maze){
-    for(let i=0,prev=0;i<maze.length;i++){
-        for(let j=0;j<maze[i].length;j++){
-            if(maze[i][j]<prev)return false;
+    for(let i=maze.length-1,prev=Number.MAX_VALUE;i>=0;i--){
+        for(let j=maze[i].length-1;j>=0;j--){
+            if(maze[i][j]>prev)return false;
             prev=maze[i][j];
         }
     }
