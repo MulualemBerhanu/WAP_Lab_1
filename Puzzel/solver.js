@@ -1,6 +1,7 @@
 //accepts two dimensional array
 //returns coordinates
 function solve(maze){
+    console.log(maze);
     let zeroPos=findBlankCord(maze);
     for(let depth=1;;depth++){
         let soln = solveIterativeDeepningDFS(maze,[],zeroPos,depth);
@@ -14,7 +15,7 @@ function findBlankCord(maze){
         }
     }
 }
-function move(maze, pieceCord, targetCord){
+function _move(maze, pieceCord, targetCord){
     maze=clone(maze);
     maze[pieceCord.x][pieceCord.y]=maze[targetCord.x][targetCord.y];
     maze[targetCord.x][targetCord.y]=Number.MAX_VALUE;
@@ -50,18 +51,10 @@ function solveIterativeDeepningDFS(maze,moves,blankCord,maxDepth,depth=1){
             let availMoves=availableMoves(blankCord,maze[0].length,maze[0].length);
             for(let amove of availMoves){
                 moves.push(amove);
-                let soln = solveIterativeDeepningDFS(move(maze,blankCord,amove), moves,amove, maxDepth, depth+1);
+                let soln = solveIterativeDeepningDFS(_move(maze,blankCord,amove), moves,amove, maxDepth, depth+1);
                 if(soln)return soln;
                 moves.pop();
             }
         }
     }
 }
-
-let bl=Number.MAX_VALUE;
-let maze=[[1,bl,2,3],
-          [5,6,8,4],
-          [9,10,7,11],
-          [13,14,15,12]];
-
-console.log(solve(maze));

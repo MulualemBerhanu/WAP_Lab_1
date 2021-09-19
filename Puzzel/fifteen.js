@@ -1,5 +1,5 @@
 
-let state=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,0]];
+let state=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,Number.MAX_VALUE]];
 let zeroPos={x:3,y:3};
 
 function render(state){
@@ -10,20 +10,23 @@ function render(state){
     }
 }
 function shuffle(){
-    for(let i =0; i<100;i++){
-            temp=chooseRandom(zeroPos);
-            move(zeroPos,temp);
+    let moves=[];
+    let zPos=zeroPos;
+    for(let i =0; i<20;i++){
+        zPos=chooseRandom(zPos);
+        moves.push(zPos);
     }
+    groupMove(moves,2000);
 }
-function move(init,target){
+function move(init,target,afterMov,duration=200){
     let temp = state[target.x][target.y];
-    state[target.x][target.y]=0;
+    state[target.x][target.y]=Number.MAX_VALUE;
     state[init.x][init.y]=temp;
     zeroPos=target;
-    moveDom(init);
+    moveDom(init,afterMov,duration);
 }
-function moveDom(init){
-    $(`#tile${state[init.x][init.y]}`).animate({top:100*init.x+"px",left:100*init.y+"px"});
+function moveDom(init,afterMov,duration){
+    $(`#tile${state[init.x][init.y]}`).animate({top:100*init.x+"px",left:100*init.y+"px"},duration,afterMov);
 }
 function findPos(value){
     for(let i=0; i<4; i++){
@@ -71,6 +74,15 @@ function areNeighbors(x,y){
     else if(x.y==y.y&&Math.abs(x.x-y.x)==1)return true;
     return false;
 }
+function groupMove(solution,totalDuration){
+    let single = totalDuration/solution.length;
+    function doMove(){
+        if(solution.length){
+            move(zeroPos,solution.shift(),doMove,single);
+        }
+    }
+    doMove();
+}
 $(function(){
     init();
     $("#shufflebutton").click(()=>{
@@ -89,4 +101,9 @@ $(function(){
             $(this).toggleClass("movablepiece");
         }
     });
+
+    $("#solveButton").click(function(){
+        let solution = solve(state);
+        groupMove(solution,200*solution.length);
+    })
 });
