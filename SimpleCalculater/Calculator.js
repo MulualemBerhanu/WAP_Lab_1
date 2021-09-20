@@ -1,7 +1,7 @@
-var exp = require('express');
-var fs = require('fs');
+const exp = require('express');
+const fs = require('fs');
 const bodyParser = require('body-parser');
-
+app.use(express.urlencoded({ extended: false }))
 const app = exp();
 app.use(exp.static((__dirname, './')));
 var urlencodedParser = bodyParser.urlencoded({ extended: true });

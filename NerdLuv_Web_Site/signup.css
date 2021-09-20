@@ -1,0 +1,68 @@
+.top {
+  background-image: url(https://c0.wallpaperflare.com/preview/655/269/228/sea-night-ocean-dark.jpg);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  object-fit: cover;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 5px;
+}
+#container {
+  display: grid;
+  grid-template-columns: 120px 300px;
+  grid-gap: 5px;
+  max-width: 380px;
+  background-color: #dfdffe;
+  border-radius: 10px;
+  width: 50%;
+}
+.label {
+  padding: auto;
+}
+.legends {
+  border-style: solid;
+  background-color: white;
+  border-color: #e2e2e2;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#type {
+  width: 25%;
+}
+#min {
+  width: 25%;
+}
+#max {
+  width: 25%;
+}
+#age {
+  width: 25%;
+}
+.redc {
+  color: red;
+  left: 10px;
+}
+#signup {
+  background-color: #ffaaaa;
+}
+body {
+  width: 100%;
+}
+#nerd {
+  color: darkgreen;
+  font-size: 100px;
+}
+#luv {
+  color: royalblue;
+  font-size: 100px;
+  margin: -20px;
+}
+
+#footer {
+  background-color: black;
+  padding: 5px;
+  border-radius: 20px;
+}
+#pheader {
+  color: #dfdffe;
+  margin-top: -20px;
+}

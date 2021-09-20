@@ -1,0 +1,16 @@
+{
+  "name": "nerdluv_web_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "signup_submit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expess": "0.0.1-security",
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
