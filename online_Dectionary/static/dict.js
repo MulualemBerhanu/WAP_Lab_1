@@ -6,7 +6,7 @@ $(function(){
 
             data = JSON.parse(data);
             if(!data.length){
-                $("#display-area").append("<p>Word Not Found!</p>");
+                $("#display-area").empty().append("<p>Word Not Found!</p>");
             }
             else{
                 let elements = $("<ol>");
